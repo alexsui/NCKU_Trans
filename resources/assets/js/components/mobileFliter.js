@@ -84,7 +84,7 @@ class mobileFliter extends Component {
         var object=data[i];
         const o_output=object["option"].map(option=>{
             return(
-                <Dropdown.Item  style={{outline:"none",backgroundColor:"rgb(229,68,109)",color:"white",fontSize:"12px",width:itemWidth}} onClick={this.handleClick.bind(this,option[0],option[1],object["id"],object["now"],object["type"])}>{option[0]}</Dropdown.Item>
+                <Dropdown.Item  style={{outline:"none",backgroundColor:"rgb(229,68,109)",color:"white",fontSize:"12px",width:itemWidth,textAlign:"center",padding:"0.25rem 0.4rem"}} onClick={this.handleClick.bind(this,option[0],option[1],object["id"],object["now"],object["type"])}>{option[0]}</Dropdown.Item>
                 )});
       output.push(
         <Dropdown style={this.state.styleBtn[i]}>

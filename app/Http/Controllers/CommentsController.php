@@ -70,12 +70,14 @@ class CommentsController extends Controller
         $comment = $data["comment"];
         $confirm =  $data["confirm"];
         DB::table('major')->where('id',$id)->update(array('id'=>$new_id,'rank_1'=>$rank_1,'rank_2'=>$rank_2,'year'=>$year,'score'=>$score,'out_maj'=>$out_maj,'in_maj'=>$in_maj,'department'=>$department,'comment'=>$comment,'confirm'=>$confirm))or die('MySQL query error');
+        return "success update!";
     }
 
     //刪除一筆資料
     public function destroy($id)
     {
         DB::table('major')->where('id',$id)->delete();
+        return "success delete!";
     }
 
     private function defineDepartment($in_maj){
